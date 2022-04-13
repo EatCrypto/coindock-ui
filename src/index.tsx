@@ -2,11 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './App'
+import { MarketContextProvider } from './contexts/MarketContext'
 import reportWebVitals from './reportWebVitals'
+import GlobalStyles from './styles/GlobalStyles'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MarketContextProvider>
+      <GlobalStyles />
+      <App />
+    </MarketContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
